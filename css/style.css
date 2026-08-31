@@ -54,7 +54,6 @@ img { max-width: 100%; display: block; }
 .hero {
   background: var(--text);
   color: #fff;
-  padding: 4rem 1.5rem;
 }
 
 .hero .lead { color: var(--mint); }
@@ -71,16 +70,15 @@ img { max-width: 100%; display: block; }
 .hero-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 4rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
 }
 
-.hero-inner--wide {
-  grid-template-columns: 1fr;
-  max-width: 760px;
-}
+.hero-inner--wide { grid-template-columns: 1fr; }
+.hero-inner--wide .hero-content { max-width: 44rem; }
 
 .eyebrow {
   font-size: 0.9rem;
@@ -91,9 +89,17 @@ img { max-width: 100%; display: block; }
 .eyebrow a { color: var(--mint); text-decoration: none; }
 .eyebrow a:hover { text-decoration: underline; }
 
-.hero-logo {
-  width: 92px;
-  margin-bottom: 1.5rem;
+.hero .hero-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3rem;
+}
+
+.hero-mark {
+  height: 1.3em;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .hero h1 { font-size: 2.75rem; }
@@ -111,11 +117,8 @@ img { max-width: 100%; display: block; }
   padding: 4rem 1.5rem;
 }
 
-.split.split--text-only {
-  grid-template-columns: 1fr;
-  max-width: 760px;
-  margin: 0 auto;
-}
+.split.split--text-only { grid-template-columns: 1fr; }
+.split.split--text-only .split-content { max-width: 44rem; }
 
 .grid {
   display: grid;
@@ -186,12 +189,14 @@ img { max-width: 100%; display: block; }
 
 .section-brands {
   max-width: none;
+  padding-inline: 0;
   background: var(--paper);
 }
 
 .section-brands-inner {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding-inline: 1.5rem;
 }
 
 .brand-grid {
@@ -422,7 +427,7 @@ a.brand-card:hover .card-cta { text-decoration: underline; }
   .grid-2, .grid-3, .grid-4, .brand-grid { grid-template-columns: 1fr; }
   .brand-card { padding: 1.75rem; }
   .brand-logo, .brand-wordmark { height: 36px; }
-  .hero h1 { font-size: 2.1rem; }
+  .hero h1, .hero .hero-title { font-size: 2.1rem; }
   .consent-banner { flex-direction: column; align-items: stretch; }
   .consent-actions { justify-content: stretch; }
   .consent-btn { flex: 1; }
